@@ -5,18 +5,18 @@
 struct movie_details person[300];
 void cancelticket(int *array)
 {
-      int Cseat,i,stop;
+      int Cseat,p,stop;
 	  printf("Please enter ID number of ticket: ");
 	  scanf("%d",&Cseat);
-	  for (i=0;i<300;i++)
+	  for (p=0;p<300;p++)
 	  {
-	  		if(Cseat==person[i].id)
+	  		if(Cseat==person[p].id)
 	  		{
 					 stop=5;
 					 system("cls");
-					 printf("%s your ticket is %d cancelled",person[i].name,person[i].seatnum);
-					 array[person[i].seatnum]=0;
-					 i=300;
+					 printf("%s your ticket is %d cancelled",person[p].name,person[p].seatnum);
+					 array[person[p].seatnum]=0;
+					 p=300;
 	  		}
 	  }
 	  if (stop!=5)
